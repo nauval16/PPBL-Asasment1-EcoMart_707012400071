@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../providers/favorit_provider.dart';
-import '../cubits/belanja_cubit.dart';
+import '../cubits/keranjang_belanja_cubit.dart';
 import 'catalog_page.dart';
 import 'form_page.dart';
 import 'map_page.dart';
