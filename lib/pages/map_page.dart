@@ -9,7 +9,6 @@ class MapPage extends StatefulWidget {
 }
 
 class _MapPageState extends State<MapPage> {
-  // Koordinat simulasi lokasi komunitas GreenLife Bandung[cite: 3, 4]
   static const LatLng _greenLifeLocation = LatLng(-6.914744, 107.609810);
 
   @override

@@ -17,7 +17,6 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('EchoMart - Beranda'),
         actions: [
-          // Menampilkan jumlah Favorit menggunakan Consumer (Provider)[cite: 4]
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -28,7 +27,6 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-          // Menampilkan jumlah barang Keranjang menggunakan BlocBuilder (Cubit)[cite: 4]
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -58,7 +56,6 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 25),
             ElevatedButton(
               onPressed: () {
-                // Perpindahan ke Produk menggunakan Navigator.push[cite: 1]
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const CatalogPage()),

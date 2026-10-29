@@ -14,7 +14,6 @@ class CatalogPage extends StatefulWidget {
 }
 
 class _CatalogPageState extends State<CatalogPage> {
-  // Simpan data produk dalam List local[cite: 1, 2]
   final List<Product> _products = [
     Product(name: 'Pupuk Kompos Organik', price: 15000),
     Product(name: 'Pot Tanaman Daur Ulang', price: 25000),
@@ -29,7 +28,6 @@ class _CatalogPageState extends State<CatalogPage> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            // Kembali ke beranda menggunakan Navigator.pop[cite: 1]
             Navigator.pop(context);
           },
         ),
@@ -55,14 +53,12 @@ class _CatalogPageState extends State<CatalogPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Tombol (+) dan (-) menggunakan setState()[cite: 2]
                       Row(
                         children: [
                           IconButton(
                             icon: const Icon(Icons.remove_circle_outline),
                             onPressed: () {
                               setState(() {
-                                // Memastikan jumlah tidak kurang dari 1[cite: 2]
                                 if (product.quantity > 1) {
                                   product.quantity--;
                                 }
@@ -85,7 +81,6 @@ class _CatalogPageState extends State<CatalogPage> {
                       ),
                       Row(
                         children: [
-                          // Tombol Tambah Favorit (Provider)[cite: 4]
                           IconButton(
                             icon: const Icon(Icons.favorite_border, color: Colors.red),
                             onPressed: () {
@@ -95,7 +90,6 @@ class _CatalogPageState extends State<CatalogPage> {
                               );
                             },
                           ),
-                          // Tombol Tambah Keranjang (Cubit)[cite: 4]
                           ElevatedButton(
                             onPressed: () {
                               context.read<KeranjangCubit>().tambahBarang();

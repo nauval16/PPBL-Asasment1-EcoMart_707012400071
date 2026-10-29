@@ -22,7 +22,6 @@ class _FormPageState extends State<FormPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // TextField Nama & Telepon[cite: 3]
             TextField(
               controller: _namaController,
               decoration: const InputDecoration(
@@ -44,7 +43,6 @@ class _FormPageState extends State<FormPage> {
               'Metode Pengiriman:',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            // RadioListTile Tunai / Transfer[cite: 3]
             RadioListTile<String>(
               title: const Text('Diantar'),
               value: 'Diantar',
@@ -80,7 +78,6 @@ class _FormPageState extends State<FormPage> {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // Validasi checkbox sebelum kirim[cite: 3]
                   if (_isAgreed) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Pesanan berhasil dibuat')),
